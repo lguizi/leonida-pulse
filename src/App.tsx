@@ -24,11 +24,13 @@ import {
 import { Avatar } from "./components/Avatar";
 import {
   conversations,
+  characterImages,
   events,
   groups,
   market,
   notifications,
   posts,
+  placeImages,
   profiles,
   stories,
   vehicles,
@@ -347,10 +349,13 @@ function Post({
           </button>
         </div>
       ) : (
-        <div className={`post-visual visual-${p.id % 4}`}>
-          <div className="moon" />
-          <div className="skyline" />
-          <div className="palms">♠　♠</div>
+        <div className="post-visual official-photo">
+          <img
+            src={p.image}
+            alt={`${p.author} em ${p.place} — screenshot oficial de GTA VI`}
+            loading="lazy"
+          />
+          <div className="photo-shade" />
           <strong>{p.place.toUpperCase()} · AGORA</strong>
         </div>
       )}
@@ -472,6 +477,14 @@ function Explore() {
       <div className="gallery">
         {(q ? data : profiles.slice(0, 12)).map((x, i) => (
           <div className={`gallery-card g${i % 5}`} key={x}>
+            {characterImages[x] && (
+              <img
+                className="gallery-photo"
+                src={characterImages[x]}
+                alt={`${x} — personagem oficial de GTA VI`}
+                loading="lazy"
+              />
+            )}
             <Avatar
               initials={x
                 .split(" ")
@@ -775,6 +788,11 @@ function MapView() {
           ))}
         </div>
         <aside>
+          <img
+            className="location-preview"
+            src={placeImages[p[s]]}
+            alt={`${p[s]} — screenshot oficial de GTA VI`}
+          />
           <p className="eyebrow">LOCAL SELECIONADO</p>
           <h2>{p[s]}</h2>
           <p>

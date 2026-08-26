@@ -9,6 +9,7 @@ export type Post = {
   comments: number;
   kind: "image" | "text" | "poll" | "event";
   basis: string;
+  image: string;
 };
 export type EventItem = {
   id: number;

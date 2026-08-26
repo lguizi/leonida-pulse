@@ -5,6 +5,55 @@ import type {
   Post,
   Vehicle,
 } from "../types";
+import jason from "../assets/official/Jason_Duval_02.jpg";
+import lucia from "../assets/official/Lucia_Caminos_02.jpg";
+import cal from "../assets/official/Cal_Hampton_03.jpg";
+import boobie from "../assets/official/Boobie_Ike_01.jpg";
+import dreQuan from "../assets/official/DreQuan_Priest_01.jpg";
+import realDimez from "../assets/official/Real_Dimez_01.jpg";
+import raul from "../assets/official/Raul_Bautista_01.jpg";
+import brian from "../assets/official/Brian_Heder_01.jpg";
+import viceCity from "../assets/official/Vice_City_03.jpg";
+import leonidaKeys from "../assets/official/Leonida_Keys_02.jpg";
+import portGellhorn from "../assets/official/Port_Gellhorn_04.jpg";
+import ambrosia from "../assets/official/Ambrosia_04.jpg";
+import grassrivers from "../assets/official/Grassrivers_04.jpg";
+import mountKalaga from "../assets/official/Mount_Kalaga_National_Park_04.jpg";
+
+export const characterImages: Record<string, string> = {
+  "Jason Duval": jason,
+  "Lucia Caminos": lucia,
+  "Cal Hampton": cal,
+  "Boobie Ike": boobie,
+  "Dre’Quan Priest": dreQuan,
+  "Real Dimez": realDimez,
+  "Raul Bautista": raul,
+  "Brian Heder": brian,
+};
+export const placeImages: Record<string, string> = {
+  "Vice City": viceCity,
+  "Leonida Keys": leonidaKeys,
+  "Port Gellhorn": portGellhorn,
+  Ambrosia: ambrosia,
+  Grassrivers: grassrivers,
+  "Mount Kalaga National Park": mountKalaga,
+};
+const officialPostImages = [
+  jason,
+  lucia,
+  viceCity,
+  cal,
+  boobie,
+  dreQuan,
+  realDimez,
+  raul,
+  brian,
+  leonidaKeys,
+  portGellhorn,
+  ambrosia,
+  grassrivers,
+  mountKalaga,
+];
 
 export const profiles = [
   "Jason Duval",
@@ -132,6 +181,7 @@ export const posts: Post[] = Array.from({ length: 30 }, (_, i) => {
     comments: 48 + i * 3,
     kind: (["image", "text", "poll", "event"] as const)[i % 4],
     basis: beat.basis,
+    image: officialPostImages[i % officialPostImages.length],
   };
 });
 export const stories = Array.from({ length: 12 }, (_, i) => ({
