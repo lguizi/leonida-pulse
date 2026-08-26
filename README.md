@@ -17,6 +17,8 @@ O conteúdo narrativo parte exclusivamente da sinopse, dos personagens e dos lug
 - 12 veículos na garagem, 15 itens de mercado fictício e 6 crews.
 - 20 notificações com leitura e limpeza.
 - Leonida AI local baseada em palavras-chave, sem chave de API.
+- Página **Sobre o projeto** com tour guiado, checklist acadêmico, arquitetura, exemplos de código e gráfico interativo.
+- Carregamento sob demanda da área acadêmica para manter o feed inicial mais leve.
 - Preferências, exportação JSON, restauração, PWA, 404 e Error Boundary.
 
 ## Tecnologias
@@ -44,7 +46,7 @@ Importe o repositório, selecione o preset **Vite**, use `npm run build` e diret
 
 ## Apresentação acadêmica
 
-Comece pela entrada, publique algo no feed, demonstre persistência, abra Mensagens, Mapa, Eventos, Garagem, Mercado, Leonida AI e finalize exportando os dados. Consulte `ROTEIRO_APRESENTACAO.md`.
+O arquivo editável está em [`entrega/Leonida-Pulse-Apresentacao.pptx`](entrega/Leonida-Pulse-Apresentacao.pptx) e pode ser aberto no PowerPoint ou importado no Canva e no Google Slides. Comece pela entrada, publique algo no feed, demonstre persistência, abra Mensagens, Mapa, Eventos, Garagem, Mercado, Leonida AI e finalize em **Sobre o projeto**. Consulte também `ROTEIRO_APRESENTACAO.md`.
 
 ## Aviso
 

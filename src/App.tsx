@@ -1,7 +1,8 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import {
   Bell,
+  BookOpenCheck,
   Bot,
   CalendarDays,
   Car,
@@ -38,6 +39,11 @@ import {
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { askLeonidaAI } from "./services/leonidaAI";
 import "./index.css";
+const ProjectPage = lazy(() =>
+  import("./components/ProjectPage").then((module) => ({
+    default: module.ProjectPage,
+  })),
+);
 const nav = [
   [Home, "Início", "/"],
   [Compass, "Explorar", "/explorar"],
@@ -49,6 +55,7 @@ const nav = [
   [ShoppingBag, "Mercado", "/mercado"],
   [Users, "Crews", "/grupos"],
   [Bot, "Leonida AI", "/ai"],
+  [BookOpenCheck, "Sobre o projeto", "/projeto"],
   [Settings, "Configurações", "/configuracoes"],
 ] as const;
 function AppShell() {
@@ -103,6 +110,14 @@ function AppShell() {
         <Route path="/explorar" element={<Explore />} />
         <Route path="/mensagens" element={<Messages flash={flash} />} />
         <Route path="/ai" element={<AI />} />
+        <Route
+          path="/projeto"
+          element={
+            <Suspense fallback={<main className="feature-page">Carregando apresentação…</main>}>
+              <ProjectPage />
+            </Suspense>
+          }
+        />
         <Route path="/perfil" element={<Profile />} />
         {[
           "notificacoes",
