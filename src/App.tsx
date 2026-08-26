@@ -105,6 +105,7 @@ function AppShell() {
         </div>
       )}
       <Sidebar />
+      <Mobile />
       <Routes>
         <Route path="/" element={<Feed flash={flash} />} />
         <Route path="/explorar" element={<Explore />} />
@@ -226,7 +227,6 @@ function Feed({ flash }: { flash: (x: string) => void }) {
   return (
     <>
       <main className="feed">
-        <Mobile />
         <div className="feed-head">
           <div>
             <p className="eyebrow">HISTÓRIA DE GTA VI · BASE OFICIAL</p>
@@ -933,7 +933,7 @@ function Mobile() {
         </span>
       </Link>
       <Link to="/notificacoes">
-        <Bell />
+        <Bell aria-label="Abrir notificações" />
       </Link>
     </header>
   );
@@ -943,18 +943,23 @@ function Bottom() {
     <nav className="bottom-nav">
       <NavLink to="/">
         <Home />
+        <span>Início</span>
       </NavLink>
       <NavLink to="/explorar">
         <Compass />
+        <span>Explorar</span>
       </NavLink>
       <NavLink to="/eventos" className="center">
         <Plus />
+        <span>Eventos</span>
       </NavLink>
       <NavLink to="/mensagens">
         <MessageCircle />
+        <span>Mensagens</span>
       </NavLink>
       <NavLink to="/perfil">
         <span className="mini-avatar">LV</span>
+        <span>Perfil</span>
       </NavLink>
     </nav>
   );
