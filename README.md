@@ -2,6 +2,8 @@
 
 Rede social fictícia, imersiva e não oficial ambientada em Leonida, criada como projeto acadêmico. A aplicação demonstra arquitetura frontend moderna, experiência responsiva e interações persistidas no navegador.
 
+O conteúdo narrativo parte exclusivamente da sinopse, dos personagens e dos lugares divulgados oficialmente pela Rockstar Games para GTA VI. Cada publicação informa sua base oficial; a linguagem de rede social, as reações e os números são dramatizações da demonstração.
+
 ![Preview do Leonida Pulse](public/og.png)
 
 ## Funcionalidades

@@ -5,3 +5,9 @@
 - Feed persistente, stories e criação de publicações.
 - Explorar, perfis, mensagens, mapa, eventos, garagem, mercado e crews.
 - Notificações, Leonida AI local, preferências, exportação e PWA.
+
+## 1.1.0 — 2026-08-26
+
+- Feed e acontecimentos reescritos com base apenas na sinopse e nas biografias oficiais de GTA VI.
+- Identificação visual de base oficial e de dramatizações da demonstração.
+- Leonida AI atualizada para explicar a história, os personagens e os seis lugares confirmados.
