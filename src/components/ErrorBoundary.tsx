@@ -1,0 +1,2 @@
+import{Component,type ErrorInfo,type ReactNode}from'react'
+export class ErrorBoundary extends Component<{children:ReactNode},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return{failed:true}}componentDidCatch(error:Error,info:ErrorInfo){console.error('Leonida Pulse:',error,info.componentStack)}render(){return this.state.failed?<main className="fatal"><h1>O pulso falhou por um instante.</h1><p>Recarregue a página para voltar à demonstração.</p><button onClick={()=>location.reload()}>Recarregar</button></main>:this.props.children}}
