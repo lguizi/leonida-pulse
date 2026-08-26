@@ -27,3 +27,5 @@ dist-ssr
 *.sw?
 presentation-work/
 *.pptx.inspect.ndjson
+
+.vercel
